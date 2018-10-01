@@ -16,4 +16,10 @@ test("/test should reply with 200", t => {
             t.end()
         })
     ;
+
+    setTimeout(()=>{
+        t.fail("failed to shut down express");
+        process.exit(1);
+    },30000)
+
 });
